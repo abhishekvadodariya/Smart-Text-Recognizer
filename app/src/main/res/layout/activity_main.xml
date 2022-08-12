@@ -4,14 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:openDrawer="start">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center"
         android:gravity="center"
         android:orientation="vertical"
         android:background="#F1F1F1"
@@ -26,13 +23,13 @@
             android:fontFamily="sans-serif-medium"/>
 
         <RelativeLayout
-            android:id="@+id/a_main_rl_take_picture"
+            android:id="@+id/a_main_rl_image_to_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_xlarge"
             android:background="@drawable/draw_btn_raounded"
-            android:paddingTop="@dimen/padding_medium"
-            android:paddingBottom="@dimen/padding_medium">
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small">
 
             <ImageView
                 android:id="@+id/a_main_iv_camera"
@@ -52,19 +49,19 @@
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginLeft="@dimen/margin_large"
                 android:textStyle="bold"
-                android:text="@string/a_main_take_picture"
+                android:text="@string/a_main_image_to_text"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_size_medium2" />
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/a_main_rl_gallery"
+            android:id="@+id/a_main_rl_barcode_scanner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_large"
             android:background="@drawable/draw_btn_raound"
-            android:paddingTop="@dimen/padding_medium"
-            android:paddingBottom="@dimen/padding_medium">
+            android:paddingTop="@dimen/padding_small"
+            android:paddingBottom="@dimen/padding_small">
 
             <ImageView
                 android:id="@+id/a_main_iv_gallery"
@@ -84,7 +81,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:layout_marginLeft="@dimen/margin_large"
                 android:textStyle="bold"
-                android:text="@string/a_main_gallery"
+                android:text="@string/a_main_barcode_scanner"
                 android:textColor="@color/white"
                 android:textSize="@dimen/font_size_medium2" />
         </RelativeLayout>

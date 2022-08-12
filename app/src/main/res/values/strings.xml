@@ -2,6 +2,8 @@
     <string name="app_name">Smart Text Recognizer</string>
     <string name="a_main_start_message">Import an image to be Convert in to Text</string>
     <string name="a_main_take_picture">Take a Picture</string>
+    <string name="a_main_image_to_text">Image To Text</string>
+    <string name="a_main_barcode_scanner">Barcode Scanner</string>
     <string name="a_main_gallery">Gallery</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
