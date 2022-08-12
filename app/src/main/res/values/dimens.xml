@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progress_radius">10dp</dimen>
+    <dimen name="progress_height">8dp</dimen>
+    <dimen name="qr_code_scan_container_radius">5dp</dimen>
+    <dimen name="profile_height">200dp</dimen>
+    <dimen name="profile_picture">92dp</dimen>
+    <dimen name="toolbar_elevation">6dp</dimen>
+    <dimen name="delivery_status_signature_pad_height">160dp</dimen>
+    <dimen name="delivery_status_note_height">120dp</dimen>
+    <dimen name="icon_size">35dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>
