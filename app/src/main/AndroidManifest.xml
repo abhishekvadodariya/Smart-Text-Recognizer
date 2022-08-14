@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="uk.ac.tees.aad.b1065781">
+    
+    <uses-permission android:name="android.permission.CAMERA"/>
 
     <application
         android:allowBackup="true"
@@ -14,13 +16,15 @@
         android:theme="@style/Theme.SmartTextRecognizer"
         tools:targetApi="31">
         <activity
+            android:name=".ImageToTextConvertResult"
+            android:exported="false" />
+        <activity
             android:name=".SelectImageActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Design.Light">
+            android:theme="@style/Theme.SmartTextRecognizer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

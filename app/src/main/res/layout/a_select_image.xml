@@ -5,27 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
-    android:background="#F1F1F1"
+    android:background="@color/colorBackground"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="@dimen/padding_large"
     tools:context=".SelectImageActivity">
-
-
-    <!--<TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="@string/a_main_start_message"
-        android:textColor="@color/app_text_color_dark"
-        android:textSize="@dimen/font_size_medium2" />-->
 
     <RelativeLayout
         android:id="@+id/a_select_image_rl_take_picture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_xlarge"
-        android:background="@drawable/draw_btn_raounded"
+        android:background="@drawable/draw_btn_rounded"
         android:paddingTop="@dimen/padding_small"
         android:paddingBottom="@dimen/padding_small">
 
@@ -33,9 +24,9 @@
             android:id="@+id/a_select_image_iv_camera"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_xlarge"
+            android:layout_marginStart="@dimen/margin_xlarge"
             android:background="@drawable/ic_camera" />
 
         <TextView
@@ -43,8 +34,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_large"
-            android:layout_toRightOf="@+id/a_select_image_iv_camera"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_toEndOf="@+id/a_select_image_iv_camera"
             android:fontFamily="sans-serif-medium"
             android:text="@string/a_main_take_picture"
             android:textColor="@color/white"
@@ -57,7 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_large"
-        android:background="@drawable/draw_btn_raound"
+        android:background="@drawable/draw_btn_round"
         android:paddingTop="@dimen/padding_small"
         android:paddingBottom="@dimen/padding_small">
 
@@ -65,9 +56,9 @@
             android:id="@+id/a_select_image_iv_gallery"
             android:layout_width="@dimen/icon_size"
             android:layout_height="@dimen/icon_size"
-            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_xlarge"
+            android:layout_marginStart="@dimen/margin_xlarge"
             android:background="@drawable/ic_gallery" />
 
         <TextView
@@ -75,28 +66,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/margin_large"
-            android:layout_toRightOf="@+id/a_select_image_iv_gallery"
+            android:layout_marginStart="@dimen/margin_large"
+            android:layout_toEndOf="@+id/a_select_image_iv_gallery"
             android:fontFamily="sans-serif-medium"
             android:text="@string/a_main_gallery"
             android:textColor="@color/white"
             android:textSize="@dimen/font_size_medium2"
             android:textStyle="bold" />
     </RelativeLayout>
-
-    <!--<TextView
-    android:id="@+id/a_main_take_gallery"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="@dimen/margin_medium"
-    android:layout_marginBottom="@dimen/margin_small"
-    android:background="@drawable/draw_btn_raounded"
-    android:fontFamily="sans-serif-medium"
-    android:gravity="center"
-    android:paddingTop="@dimen/padding_medium"
-    android:paddingBottom="@dimen/padding_medium"
-    android:text="@string/a_main_gallery"
-    android:textColor="@color/white"
-    android:textSize="@dimen/font_size_medium"/>-->
 
 </LinearLayout>
