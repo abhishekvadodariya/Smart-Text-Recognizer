@@ -73,5 +73,6 @@ public class SelectImageActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         Bundle bundle = data.getExtras();
         Bitmap bitmap = (Bitmap) bundle.get("data");
+
     }
 }

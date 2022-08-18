@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "505770356801",
+    "project_id": "smart-text-recognizer-9bdfb",
+    "storage_bucket": "smart-text-recognizer-9bdfb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:505770356801:android:84cc1e8a542077d38fd6c0",
+        "android_client_info": {
+          "package_name": "uk.ac.tees.aad.b1065781"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "505770356801-e599t8ppi2v03ki5pculfopv49d4f6ve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHXVtYJXisCXa0hjrjpdjpuWP37GH7Ct0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "505770356801-e599t8ppi2v03ki5pculfopv49d4f6ve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
