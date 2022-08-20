@@ -53,11 +53,10 @@ public class LoginActivity extends AppCompatActivity {
 
         mProgressbar.setVisibility(View.VISIBLE);
 
-        String mEmail, mPassword;
-        mEmail = tvEmail.getText().toString();
-        mPassword = tvPass.getText().toString();
+        email = tvEmail.getText().toString().trim();
+        password = tvPass.getText().toString().trim();
 
-        if (TextUtils.isEmpty(mEmail)) {
+        if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(),
                             "Please enter email",
                             Toast.LENGTH_LONG)
@@ -65,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        if (TextUtils.isEmpty(mPassword)) {
+        if (TextUtils.isEmpty(password)) {
             Toast.makeText(getApplicationContext(),
                             "Please enter password",
                             Toast.LENGTH_LONG)
@@ -73,7 +72,7 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        mAuth.signInWithEmailAndPassword(mEmail, mPassword)
+        mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(
                         task -> {
                             if (task.isSuccessful()) {
