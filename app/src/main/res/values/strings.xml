@@ -22,4 +22,11 @@
     <string name="a_select_image_from_gallery">CHOOSE IMAGE FROM GALLERY</string>
     <string name="a_select_image_exit">EXIT</string>
 
+    <string name="a_barcode_scanner_header">Barcode &amp; QR Code Scanner</string>
+    <string name="a_barcode_scanner_camera">CAMERA</string>
+    <string name="a_barcode_scanner_gallery">GALLERY</string>
+    <string name="a_barcode_scanner_scan">SCAN</string>
+    <string name="a_barcode_scanner_result">Result :</string>
+
+
 </resources>

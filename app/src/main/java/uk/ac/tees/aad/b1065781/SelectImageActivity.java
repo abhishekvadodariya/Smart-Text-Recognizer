@@ -45,8 +45,6 @@ public class SelectImageActivity extends AppCompatActivity {
     private TextView showText;
     private ImageView showImage;
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 201;
-    private static final int CAMERA_CAPTURE = 1;
-    private static final int CROP_PIC = 2;
     private static final int GALLERY_PERMISSION_REQUEST_CODE = 101;
     private Uri picUri;
     private File imageFile;
@@ -97,7 +95,6 @@ public class SelectImageActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if (checkCameraPermission()) {
-                    //File imageFile = new File(getExternalStorageDirectory(), "temp.jpg");
                     Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                     if (takePictureIntent.resolveActivity(getApplicationContext().getPackageManager()) != null) {
                         imageFile = null;
@@ -110,10 +107,6 @@ public class SelectImageActivity extends AppCompatActivity {
                             takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, picUri);
                             startActivityForResult(takePictureIntent, CAMERA_PERMISSION_REQUEST_CODE);
                         }
-                            /*picUri = FileProvider.getUriForFile(getApplicationContext(),"uk.ac.tees.aad.b1065781.provider",imageFile);
-                            picUri = Uri.parse(imageFile.getAbsolutePath());
-                            takePictureIntent.putExtra(android.provider.MediaStore.EXTRA_OUTPUT,picUri);*/
-                        //intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     }
                 } else {
                     requestForPermission();
@@ -259,7 +252,6 @@ public class SelectImageActivity extends AppCompatActivity {
                 for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
                     for (FirebaseVisionText.Line line : block.getLines()) {
                         for (FirebaseVisionText.Element element : line.getElements()) {
-                            String elementText = element.getText();
                             showText.setText(resultText);
                         }
                     }

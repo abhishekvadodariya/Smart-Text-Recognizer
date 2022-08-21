@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_medium"
+    tools:context=".BarcodeScannerActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a_barcode_scanner_header"
+            android:textAlignment="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/a_barcode_scanner_btn_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_micro4"
+                android:layout_weight="1"
+                android:text="@string/a_barcode_scanner_camera" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/a_barcode_scanner_btn_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_micro4"
+                android:layout_weight="1"
+                android:text="@string/a_barcode_scanner_gallery" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/a_barcode_scanner_iv_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_baseline_qr_code_scanner_24" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/a_barcode_scanner_btn_scan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_micro4"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_weight="1"
+            android:text="@string/a_barcode_scanner_scan" />
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small"
+            android:text="@string/a_barcode_scanner_result" />
+
+        <TextView
+            android:id="@+id/a_barcode_scanner_tv_result"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_small" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>
