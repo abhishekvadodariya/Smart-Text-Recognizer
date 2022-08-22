@@ -6,12 +6,15 @@
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable-v24/drw_note_rounded.xml" value="0.1195" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable/draw_btn_raound.xml" value="0.1195" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable/draw_btn_raounded.xml" value="0.1195" />
+        <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable/draw_btn_round.xml" value="0.1235" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable/draw_btn_rounded.xml" value="0.1195" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable/draw_note_rounded.xml" value="0.1195" />
+        <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable/draw_text_result_rounded.xml" value="0.1235" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1195" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/layout/a_barcode_scanner.xml" value="0.2421875" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/layout/a_image_to_text_convert_result.xml" value="0.17109375" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/layout/a_select_image.xml" value="0.23802083333333332" />
+        <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/layout/a_text_convert_result.xml" value="0.228125" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/layout/activity_login.xml" value="0.2421875" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/layout/activity_main.xml" value="0.2421875" />
         <entry key="..\:/Android Project/SmartTextRecognizer/app/src/main/res/layout/activity_main2.xml" value="0.2421875" />

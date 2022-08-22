@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/padding_medium"
+    android:padding="@dimen/padding_large"
     tools:context=".BarcodeScannerActivity">
 
     <LinearLayout
@@ -32,6 +32,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/margin_micro4"
                 android:layout_weight="1"
+                android:padding="@dimen/padding_small2"
                 android:text="@string/a_barcode_scanner_camera" />
 
             <com.google.android.material.button.MaterialButton
@@ -40,6 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/margin_micro4"
                 android:layout_weight="1"
+                android:padding="@dimen/padding_small2"
                 android:text="@string/a_barcode_scanner_gallery" />
         </LinearLayout>
 
@@ -56,11 +58,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_micro4"
             android:layout_marginTop="@dimen/margin_small"
-            android:layout_weight="1"
+            android:padding="@dimen/padding_small2"
             android:text="@string/a_barcode_scanner_scan" />
 
         <TextView
-            style="@style/TextAppearance.MaterialComponents.Body1"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_small"
@@ -72,8 +74,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/padding_small" />
-
-
     </LinearLayout>
 
 

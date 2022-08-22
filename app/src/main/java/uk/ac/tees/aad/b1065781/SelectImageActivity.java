@@ -28,6 +28,7 @@ import androidx.core.content.FileProvider;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.button.MaterialButton;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
@@ -42,13 +43,14 @@ public class SelectImageActivity extends AppCompatActivity {
 
     private RelativeLayout rrTakePicture;
     private RelativeLayout rrSelectFromGallery;
-    private TextView showText;
     private ImageView showImage;
+    private MaterialButton scanResult;
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 201;
     private static final int GALLERY_PERMISSION_REQUEST_CODE = 101;
     private Uri picUri;
     private File imageFile;
     private String cameraImagePath;
+    private String textResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,8 +59,8 @@ public class SelectImageActivity extends AppCompatActivity {
 
         rrTakePicture = findViewById(R.id.a_select_image_rl_take_picture);
         rrSelectFromGallery = findViewById(R.id.a_select_image_rl_gallery);
-        showText = findViewById(R.id.a_select_image_text);
         showImage = findViewById(R.id.a_select_image_iv);
+        scanResult = findViewById(R.id.a_select_image_mb_scan);
 
         OnCLick();
     }
@@ -91,6 +93,15 @@ public class SelectImageActivity extends AppCompatActivity {
     }
 
     private void OnCLick() {
+        scanResult.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SelectImageActivity.this,TextConvertResultActivity.class);
+                intent.putExtra("TEXT_RESULT",textResult);
+                startActivity(intent);
+            }
+        });
+
         rrTakePicture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -252,7 +263,7 @@ public class SelectImageActivity extends AppCompatActivity {
                 for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
                     for (FirebaseVisionText.Line line : block.getLines()) {
                         for (FirebaseVisionText.Element element : line.getElements()) {
-                            showText.setText(resultText);
+                            textResult = resultText;
                         }
                     }
                 }

@@ -5,6 +5,7 @@
     <dimen name="padding_micro3">4dp</dimen>
     <dimen name="padding_micro4">6dp</dimen>
     <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_small2">12dp</dimen>
     <dimen name="padding_medium">16dp</dimen>
     <dimen name="padding_large">20dp</dimen>
     <dimen name="padding_xlarge">25dp</dimen>
