@@ -61,20 +61,11 @@
             android:padding="@dimen/padding_small2"
             android:text="@string/a_barcode_scanner_scan" />
 
-        <TextView
-            style="@style/TextAppearance.MaterialComponents.Headline6"
-            android:layout_width="match_parent"
+        <ProgressBar
+            android:id="@+id/a_barcode_scanner_progressBar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="@dimen/padding_small"
-            android:text="@string/a_barcode_scanner_result" />
-
-        <TextView
-            android:id="@+id/a_barcode_scanner_tv_result"
-            style="@style/TextAppearance.MaterialComponents.Body1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding_small" />
+            android:layout_gravity="center"
+            android:visibility="gone" />
     </LinearLayout>
-
-
 </ScrollView>

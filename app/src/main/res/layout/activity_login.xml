@@ -1,63 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_large"
     tools:context=".LoginActivity">
 
-    <LinearLayout
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/a_login_text"
+        android:textSize="@dimen/font_size_xlarge" />
 
-
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:padding="15dp"
-        tools:context=".LoginActivity">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:hint="@string/a_login_email">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Login"
-            android:textSize="@dimen/font_size_xlarge" />
-
-        <EditText
-            android:id="@+id/email"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/a_login_et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your Email" />
+            android:inputType="textEmailAddress"
+            android:singleLine="true" />
 
-        <!-- Edit text for password -->
-        <EditText
-            android:id="@+id/password"
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:hint="@string/a_login_password"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/colorAccent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/a_login_et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your Password"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:singleLine="true" />
 
-        <Button
-            android:id="@+id/login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Login" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_gravity="center"
-            />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/a_mb_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:padding="@dimen/padding_small"
+        android:text="@string/a_login_text" />
 
-        <TextView
-            android:id="@+id/registration"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAlignment="center"
-            android:text="Don't have account? Register!"/>
-    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/a_login_progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/a_login_registration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/a_login_register_option"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_color_light"
+        android:textSize="@dimen/font_size_medium" />
+</LinearLayout>
 

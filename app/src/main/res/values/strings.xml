@@ -29,5 +29,12 @@
     <string name="a_text_convert_result_copy">COPY</string>
     <string name="a_text_convert_result_share">SHARE</string>
 
+    <string name="a_login_text">LOGIN</string>
+    <string name="a_login_email">Enter your Email</string>
+    <string name="a_login_password">Enter your password</string>
+    <string name="a_login_register_option">Don\'t have account? Register!</string>
+
+    <string name="a_registration_text">REGISTRATION</string>
+
 
 </resources>

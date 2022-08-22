@@ -35,6 +35,8 @@ public class TextConvertResultActivity extends AppCompatActivity {
         String textResult = intent.getStringExtra("TEXT_RESULT");
         resultText.setText(textResult);
         onClick();
+        String barcodeTextResult = intent.getStringExtra("BARCODE_TEXT_RESULT");
+        resultText.setText(barcodeTextResult);
     }
 
     private void onClick(){

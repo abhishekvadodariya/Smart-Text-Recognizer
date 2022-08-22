@@ -10,10 +10,13 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -49,6 +52,7 @@ public class BarcodeScannerActivity extends AppCompatActivity {
     private MaterialButton mbGallery;
     private ImageView ivCode;
     private MaterialButton mbScan;
+    private ProgressBar progressBar;
     private TextView tvResult;
     private Uri imageUri = null;
     private static final int CAMERA_PERMISSION_REQUEST_CODE = 301;
@@ -57,6 +61,7 @@ public class BarcodeScannerActivity extends AppCompatActivity {
     private BarcodeScanner barcodeScanner;
     private File imageFile;
     private String imagePath;
+    private String result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +71,7 @@ public class BarcodeScannerActivity extends AppCompatActivity {
         mbGallery = findViewById(R.id.a_barcode_scanner_btn_gallery);
         ivCode = findViewById(R.id.a_barcode_scanner_iv_code);
         mbScan = findViewById(R.id.a_barcode_scanner_btn_scan);
-        tvResult = findViewById(R.id.a_barcode_scanner_tv_result);
+        progressBar = findViewById(R.id.a_barcode_scanner_progressBar);
         barcodeScannerOptions = new BarcodeScannerOptions.Builder().setBarcodeFormats(Barcode.ALL_FORMATS).build();
         barcodeScanner = BarcodeScanning.getClient(barcodeScannerOptions);
         onClick();
@@ -102,6 +107,17 @@ public class BarcodeScannerActivity extends AppCompatActivity {
                     Toast.makeText(BarcodeScannerActivity.this, "something went wrong", Toast.LENGTH_LONG);
                 } else {
                     getResultFromImage();
+                    Handler handler = new Handler();
+                    progressBar.setVisibility(View.VISIBLE);
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            progressBar.setVisibility(View.GONE);
+                            Intent intent = new Intent(BarcodeScannerActivity.this,TextConvertResultActivity.class);
+                            intent.putExtra("BARCODE_TEXT_RESULT",result);
+                            startActivity(intent);
+                        }
+                    },5000);
                 }
             }
         });
@@ -139,16 +155,16 @@ public class BarcodeScannerActivity extends AppCompatActivity {
                     String ssid = "" + typeWifi.getSsid();
                     String password = "" + typeWifi.getPassword();
                     String encryptionType = "" + typeWifi.getEncryptionType();
-                    String wifi = "TYPE: TYPE_WIFI \nssid" + ssid + "\npassword: " + password + "\nencryptionType" + encryptionType + "\n row value" + rawValue;
-                    tvResult.setText(wifi);
+                    String wifi = "TYPE: TYPE_WIFI \nssid : " + ssid + "\npassword : " + password + "\nencryptionType :" + encryptionType + "\n row value : " + rawValue;
+                    result = wifi;
                 }
                 break;
                 case com.google.mlkit.vision.barcode.common.Barcode.TYPE_URL: {
                     com.google.mlkit.vision.barcode.common.Barcode.UrlBookmark typeUrl = barcode.getUrl();
                     String title = "" + typeUrl.getTitle();
                     String url = "" + typeUrl.getUrl();
-                    String mainUrl = "TYPE: TYPE_URL\ntitle" + title + "\nurl:" + url + "\nRaw Value" + rawValue + "";
-                    tvResult.setText(mainUrl);
+                    String mainUrl = "TYPE: TYPE_URL\ntitle : " + title + "\nurl : " + url + "\nRaw Value : " + rawValue + "";
+                    result = mainUrl;
                 }
                 break;
                 case com.google.mlkit.vision.barcode.common.Barcode.TYPE_EMAIL: {
@@ -156,8 +172,8 @@ public class BarcodeScannerActivity extends AppCompatActivity {
                     String address = "" + typeEmail.getAddress();
                     String body = "" + typeEmail.getBody();
                     String subject = "" + typeEmail.getSubject();
-                    String email = "TYPE: TYPE_EMAIL\naddress" + address + "\nbody:" + body + "\nsubject" + subject + "\nRaw Value" + rawValue + "";
-                    tvResult.setText(email);
+                    String email = "TYPE: TYPE_EMAIL\naddress : " + address + "\nbody : " + body + "\nsubject : " + subject + "\nRaw Value : " + rawValue + "";
+                    result = email;
                 }
                 break;
                 case com.google.mlkit.vision.barcode.common.Barcode.TYPE_CONTACT_INFO: {
@@ -166,16 +182,17 @@ public class BarcodeScannerActivity extends AppCompatActivity {
                     String organizer = "" + contactInfo.getOrganization();
                     String name = "" + contactInfo.getName();
                     String phone = "" + contactInfo.getPhones();
-                    String info = "TYPE: TYPE_CONTACT_INFO\ntitle" + title + "\norganizer:" + organizer + "\nname" + name + "\nphone" + phone + "\nRaw Value" + rawValue + "";
-                    tvResult.setText(info);
+                    String info = "TYPE: TYPE_CONTACT_INFO\ntitle : " + title + "\norganizer : " + organizer + "\nname : " + name + "\nphone : " + phone + "\nRaw Value : " + rawValue + "";
+                    result = info;
                 }
                 break;
                 case com.google.mlkit.vision.barcode.common.Barcode.TYPE_PRODUCT: {
                     String product = rawValue;
-                    tvResult.setText(product);
+                    result = product;
                 }
                 default: {
-                    tvResult.setText("Raw Value" + rawValue);
+                    String defaultResult = rawValue;
+                    result = "Raw Value : " + defaultResult;
                 }
             }
         }

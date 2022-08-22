@@ -14,13 +14,16 @@ import android.widget.Toast;
 import android.widget.EditText;
 import android.widget.Button;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText tvEmail, tvPass;
+    private TextInputEditText tvEmail;
+    private TextInputEditText tvPass;
     private TextView tvRegistration;
-    private Button Btn;
+    private MaterialButton btnLogin;
     private ProgressBar mProgressbar;
     private FirebaseAuth mAuth;
 
@@ -37,15 +40,15 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
 
-        tvEmail = findViewById(R.id.email);
-        tvPass = findViewById(R.id.password);
-        tvRegistration = findViewById(R.id.registration);
-        Btn = findViewById(R.id.login);
-        mProgressbar = findViewById(R.id.progressBar);
+        tvEmail = findViewById(R.id.a_login_et_email);
+        tvPass = findViewById(R.id.a_login_et_password);
+        tvRegistration = findViewById(R.id.a_login_registration);
+        btnLogin = findViewById(R.id.a_mb_login);
+        mProgressbar = findViewById(R.id.a_login_progressBar);
 
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
 
-        Btn.setOnClickListener(v -> userLogin());
+        btnLogin.setOnClickListener(v -> userLogin());
         tvRegistration.setOnClickListener(v -> startActivity(new Intent(LoginActivity.this, RegistrationActivity.class)));
     }
 

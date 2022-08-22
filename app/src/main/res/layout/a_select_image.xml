@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:adjustViewBounds="true"
                 android:layout_marginTop="@dimen/margin_medium"
-                android:src="@drawable/ic_baseline_qr_code_scanner_24" />
+                android:src="@drawable/ic_baseline_image_search_24"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/a_select_image_mb_scan"

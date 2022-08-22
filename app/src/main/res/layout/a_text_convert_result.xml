@@ -24,6 +24,7 @@
         android:padding="@dimen/padding_small"
         android:textIsSelectable="true"
         android:textSize="@dimen/font_size_medium2"
+        android:autoLink="all"
         android:fontFamily="sans-serif-medium"
         android:textColor="@color/app_text_color_dark"
         android:background="@drawable/draw_text_result_rounded" />

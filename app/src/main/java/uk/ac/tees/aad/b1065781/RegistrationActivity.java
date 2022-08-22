@@ -12,12 +12,16 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 import android.widget.EditText;
 import android.widget.Button;
+
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class RegistrationActivity extends AppCompatActivity {
 
-    private EditText tvEmail, tvPassword;
-    private Button Btn;
+    private TextInputEditText tvEmail;
+    private TextInputEditText tvPassword;
+    private MaterialButton mbRegister;
     private ProgressBar mProgressbar;
     private FirebaseAuth mAuth;
     public static final String SHARED_PREFS = "shared_prefs";
@@ -34,12 +38,12 @@ public class RegistrationActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
 
-        tvEmail = findViewById(R.id.email);
-        tvPassword = findViewById(R.id.passwd);
-        Btn = findViewById(R.id.btnregister);
+        tvEmail = findViewById(R.id.a_registration_et_email);
+        tvPassword = findViewById(R.id.a_registration_et_password);
+        mbRegister = findViewById(R.id.a_mb_register);
         mProgressbar = findViewById(R.id.progressbar);
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
-        Btn.setOnClickListener(v -> registerNewUser());
+        mbRegister.setOnClickListener(v -> registerNewUser());
     }
 
     private void registerNewUser() {
