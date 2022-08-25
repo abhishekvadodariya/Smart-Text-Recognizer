@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public ActionBarDrawerToggle actionBarDrawerToggle;
     private RelativeLayout relativeLayoutImageToText;
     private RelativeLayout relativeLayoutBarcodeScanner;
+    private RelativeLayout relativeLayoutPrivacyPolicy;
     public static final String SHARED_PREFS = "shared_prefs";
     public static final String EMAIL_KEY = "email_key";
     public static final String PASSWORD_KEY = "password_key";
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         relativeLayoutImageToText = findViewById(R.id.a_main_rl_image_to_text);
         relativeLayoutBarcodeScanner = findViewById(R.id.a_main_rl_barcode_scanner);
+        relativeLayoutPrivacyPolicy = findViewById(R.id.a_main_rl_privacy_policy);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         sharedpreferences = getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
@@ -67,6 +69,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this,BarcodeScannerActivity.class));
+            }
+        });
+
+        relativeLayoutPrivacyPolicy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,PolicyActivity.class));
             }
         });
     }

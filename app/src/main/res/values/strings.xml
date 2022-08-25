@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">Smart Text Recognizer</string>
     <string name="app_name_capital">SMART TEXT RECOGNIZER</string>
-    <string name="a_main_start_message">Import an image to be Convert in to Text</string>
     <string name="a_main_image_to_text">Convert Image To Text</string>
     <string name="a_main_barcode_scanner">Barcode Scanner</string>
+    <string name="a_main_privacy_policy">Privacy Policy</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -37,6 +37,26 @@
 
     <string name="a_registration_text">REGISTRATION</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="a_privacy_policy">PRIVACY POLICY</string>
+    <string name="a_policy_about_app">ABOUT APP</string>
+
+    <string name="about_three">The main purposes of Smart Text Recognizer Android Application was created was to convert images into text. For example, if you have an image with text, you can extract that text from the image and copy it using this application. Users have two options for importing images into the application: they can either use their camera or their mobile gallery. Additionally, this application allows you to scan barcodes and retrieve results.</string>
+    <string name="about_two"><b>Application version : 1</b></string>
+    <string name="about_one"><b>Application Name : Smart Text Recognizer</b></string>
+
+    <string name="a_privacy_policy_one">If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.</string>
+    <string name="a_privacy_policy_two"><b>Information Collection and Use</b></string>
+    <string name="a_privacy_policy_three">For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.<br/>The app does use third-party services that may collect information used to identify you.
+Link to the privacy policy of third party service providers used by the app. <br/><b><href>https://policies.google.com/privacy</href></b></string>
+    <string name="a_privacy_policy_four"><b>Security</b></string>
+    <string name="a_privacy_policy_five">I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.</string>
+    <string name="a_privacy_policy_six">Contact Us</string>
+    <string name="a_privacy_policy_seven">If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at <b><href>abhishek.patel.6295@gmail.com</href></b></string>
+
+
+
+
 
 
 </resources>
