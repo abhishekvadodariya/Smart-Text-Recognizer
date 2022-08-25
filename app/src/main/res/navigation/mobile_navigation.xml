@@ -5,21 +5,21 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_home">
 
-    <fragment
+    <!--<fragment
         android:id="@+id/nav_home"
         android:name="uk.ac.tees.aad.b1065781.ui.home.HomeFragment"
-        android:label="@string/menu_home"
+        android:label="@string/menu_share_app"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
         android:name="uk.ac.tees.aad.b1065781.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_email_us"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="uk.ac.tees.aad.b1065781.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:label="@string/menu_logout"
+        tools:layout="@layout/fragment_slideshow" />-->
 </navigation>

@@ -11,10 +11,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -51,6 +53,7 @@ public class SelectImageActivity extends AppCompatActivity {
     private File imageFile;
     private String cameraImagePath;
     private String textResult;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +64,7 @@ public class SelectImageActivity extends AppCompatActivity {
         rrSelectFromGallery = findViewById(R.id.a_select_image_rl_gallery);
         showImage = findViewById(R.id.a_select_image_iv);
         scanResult = findViewById(R.id.a_select_image_mb_scan);
+        progressBar = findViewById(R.id.a_select_image_progressBar);
 
         OnCLick();
     }
@@ -96,9 +100,17 @@ public class SelectImageActivity extends AppCompatActivity {
         scanResult.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SelectImageActivity.this,TextConvertResultActivity.class);
-                intent.putExtra("TEXT_RESULT",textResult);
-                startActivity(intent);
+                Handler handler = new Handler();
+                progressBar.setVisibility(View.VISIBLE);
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        progressBar.setVisibility(View.GONE);
+                        Intent intent = new Intent(SelectImageActivity.this,TextConvertResultActivity.class);
+                        intent.putExtra("TEXT_RESULT",textResult);
+                        startActivity(intent);
+                    }
+                },5000);
             }
         });
 
@@ -260,10 +272,10 @@ public class SelectImageActivity extends AppCompatActivity {
             @Override
             public void onSuccess(FirebaseVisionText firebaseVisionText) {
                 String resultText = firebaseVisionText.getText();
+                textResult = resultText;
                 for (FirebaseVisionText.TextBlock block : firebaseVisionText.getTextBlocks()) {
                     for (FirebaseVisionText.Line line : block.getLines()) {
                         for (FirebaseVisionText.Element element : line.getElements()) {
-                            textResult = resultText;
                         }
                     }
                 }

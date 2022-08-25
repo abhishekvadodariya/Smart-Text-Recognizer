@@ -87,21 +87,6 @@
                 android:textSize="@dimen/font_size_medium2" />
         </RelativeLayout>
 
-        <!--<TextView
-        android:id="@+id/a_main_take_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_medium"
-        android:layout_marginBottom="@dimen/margin_small"
-        android:background="@drawable/draw_btn_raounded"
-        android:fontFamily="sans-serif-medium"
-        android:gravity="center"
-        android:paddingTop="@dimen/padding_medium"
-        android:paddingBottom="@dimen/padding_medium"
-        android:text="@string/a_main_gallery"
-        android:textColor="@color/white"
-        android:textSize="@dimen/font_size_medium"/>-->
-
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView

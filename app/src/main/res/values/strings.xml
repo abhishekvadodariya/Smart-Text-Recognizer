@@ -11,9 +11,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_share_app">Share Application</string>
+    <string name="menu_email_us">Email Us</string>
+    <string name="menu_logout">Logout</string>
 
     <string name="a_select_image">Select Image</string>
     <string name="a_select_take_image_from_camera">TAKE IMAGE</string>
@@ -35,6 +35,8 @@
     <string name="a_login_register_option">Don\'t have account? Register!</string>
 
     <string name="a_registration_text">REGISTRATION</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

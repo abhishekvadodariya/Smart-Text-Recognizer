@@ -113,7 +113,7 @@ public class BarcodeScannerActivity extends AppCompatActivity {
                         @Override
                         public void run() {
                             progressBar.setVisibility(View.GONE);
-                            Intent intent = new Intent(BarcodeScannerActivity.this,TextConvertResultActivity.class);
+                            Intent intent = new Intent(BarcodeScannerActivity.this,BarcodeResultActivity.class);
                             intent.putExtra("BARCODE_TEXT_RESULT",result);
                             startActivity(intent);
                         }
