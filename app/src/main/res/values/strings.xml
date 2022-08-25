@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Smart Text Recognizer</string>
+    <string name="app_name_capital">SMART TEXT RECOGNIZER</string>
     <string name="a_main_start_message">Import an image to be Convert in to Text</string>
     <string name="a_main_image_to_text">Convert Image To Text</string>
     <string name="a_main_barcode_scanner">Barcode Scanner</string>
@@ -35,7 +36,6 @@
     <string name="a_login_register_option">Don\'t have account? Register!</string>
 
     <string name="a_registration_text">REGISTRATION</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 

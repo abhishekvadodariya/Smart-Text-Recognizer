@@ -4,7 +4,7 @@
     <dimen name="progress_height">8dp</dimen>
     <dimen name="qr_code_scan_container_radius">5dp</dimen>
     <dimen name="profile_height">200dp</dimen>
-    <dimen name="profile_picture">92dp</dimen>
+    <dimen name="profile_picture">70dp</dimen>
     <dimen name="toolbar_elevation">6dp</dimen>
     <dimen name="delivery_status_signature_pad_height">160dp</dimen>
     <dimen name="delivery_status_note_height">120dp</dimen>

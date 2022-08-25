@@ -5,8 +5,11 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -18,6 +21,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import java.util.List;
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
@@ -96,6 +100,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.navLogin:
                 performLogout();
                 break;
+
+            case R.id.share_app:
+                try {
+                    String text = "Let me recommend you this application for Convert image from text and barcode scan\n\n https://play.google.com/store/apps/details?id=uk.ac.tees.aad.b1065781";
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, R.string.app_name);
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, text);
+                    startActivity(Intent.createChooser(sharingIntent, "Share text via"));
+
+                }catch (Exception ex){
+                    Log.d("capture_error", ex.toString());
+                }
+                break;
+
+            case R.id.email_us:{
+                Intent emailIntent = new Intent(android.content.Intent.ACTION_SEND);
+                emailIntent.setType("text/plain");
+                final PackageManager packageManager = getPackageManager();
+                final List<ResolveInfo> apps = packageManager.queryIntentActivities(emailIntent,0);
+                ResolveInfo resolveInfo = null;
+                for (final ResolveInfo info : apps){
+                    if(info.activityInfo.packageName.endsWith(".gm") || info.activityInfo.name.toLowerCase().contains("gmail")) resolveInfo = info;
+                    if (resolveInfo != null){
+                        emailIntent.putExtra(android.content.Intent.EXTRA_SUBJECT, "Feedback For Smart Text Recognizer");
+                        emailIntent.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{"abhishek.patel.6295@gmail.com"});
+                        emailIntent.putExtra(android.content.Intent.EXTRA_TEXT, R.string.app_name);
+                        emailIntent.setClassName(resolveInfo.activityInfo.packageName,resolveInfo.activityInfo.name);
+                        startActivity(emailIntent);
+                    }
+                }
+            }
         }
         return true;
     }
