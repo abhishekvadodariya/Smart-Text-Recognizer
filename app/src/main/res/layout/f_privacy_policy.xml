@@ -17,6 +17,7 @@
             android:padding="@dimen/padding_large">
 
             <TextView
+                android:id="@+id/f_privacy_policy"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
@@ -26,11 +27,12 @@
                 android:padding="@dimen/padding_micro4"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy"
-                android:textColor="@color/white"
+                android:textColor="@color/app_text_color_dark"
                 android:textSize="@dimen/font_size_xlarge"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/f_privacy_policy_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
@@ -38,9 +40,10 @@
                 android:padding="@dimen/padding_medium"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy_one"
-                android:textColor="@color/white" />
+                android:textColor="@color/app_text_color_dark" />
 
             <TextView
+                android:id="@+id/f_privacy_policy_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
@@ -49,10 +52,11 @@
                 android:padding="@dimen/padding_medium"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy_two"
-                android:textColor="@color/white"
+                android:textColor="@color/app_text_color_dark"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/f_privacy_policy_info_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
@@ -60,9 +64,10 @@
                 android:padding="@dimen/padding_medium"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy_three"
-                android:textColor="@color/white" />
+                android:textColor="@color/app_text_color_dark" />
 
             <TextView
+                android:id="@+id/f_privacy_policy_security"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
@@ -71,10 +76,11 @@
                 android:padding="@dimen/padding_medium"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy_four"
-                android:textColor="@color/white"
+                android:textColor="@color/app_text_color_dark"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/f_privacy_policy_security_dic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
@@ -82,9 +88,10 @@
                 android:padding="@dimen/padding_medium"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy_five"
-                android:textColor="@color/white" />
+                android:textColor="@color/app_text_color_dark" />
 
             <TextView
+                android:id="@+id/f_privacy_policy_contact_us"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
@@ -93,10 +100,11 @@
                 android:padding="@dimen/padding_medium"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy_six"
-                android:textColor="@color/white"
+                android:textColor="@color/app_text_color_dark"
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/f_privacy_policy_contact_us_dic"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_small"
@@ -104,7 +112,7 @@
                 android:padding="@dimen/padding_medium"
                 android:scrollbars="vertical"
                 android:text="@string/a_privacy_policy_seven"
-                android:textColor="@color/white" />
+                android:textColor="@color/app_text_color_dark" />
 
         </LinearLayout>
     </ScrollView>
